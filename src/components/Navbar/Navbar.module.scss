@@ -1,0 +1,44 @@
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
+.logo {
+  font-size: 25px;
+  span {
+    opacity: 0.6;
+  }
+}
+.links {
+  display: flex;
+  gap: 50px;
+
+  .link {
+    font-size: 18px;
+    position: relative;
+
+    &::after {
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #080808;
+      content: '';
+      transition: width 0.3s ease-out;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      width: 100%;
+    }
+  }
+}
+.cart__link {
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

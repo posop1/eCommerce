@@ -8,9 +8,12 @@ interface NavbarProps {}
 const Navbar: React.FC<NavbarProps> = () => {
   return (
     <div className={s.navbar}>
-      <h1 className={s.logo}>
+      <Link
+        to="/"
+        className={s.logo}
+      >
         <span>e</span>Commerce
-      </h1>
+      </Link>
       <nav className={s.links}>
         {links.map((link) => (
           <Link

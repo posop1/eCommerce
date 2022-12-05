@@ -2,7 +2,7 @@ import s from './AboutPage.module.scss'
 
 interface AboutPageProps {}
 
-const AboutPage: React.FC<AboutPageProps> = () => {
+export const AboutPage: React.FC<AboutPageProps> = () => {
   return (
     <div className={s.AboutPage}>
       <h3>About</h3>
@@ -19,5 +19,3 @@ const AboutPage: React.FC<AboutPageProps> = () => {
     </div>
   )
 }
-
-export default AboutPage

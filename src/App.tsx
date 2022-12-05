@@ -1,11 +1,7 @@
 import { Routes } from 'react-router'
 import { BrowserRouter, Route } from 'react-router-dom'
 import Layout from './components/Layout'
-import { HomePage } from './pages/'
-import AboutPage from './pages/AboutPage/AboutPage'
-import FaqPage from './pages/FaqPage/FaqPage'
-import NotFoundPage from './pages/NotFoundPage/NotFoundPage'
-import ShopPage from './pages/ShopPage/ShopPage'
+import { routes } from './utils/constans'
 
 const App = () => {
   return (
@@ -15,26 +11,12 @@ const App = () => {
           path="/"
           element={<Layout />}
         >
-          <Route
-            index
-            element={<HomePage />}
-          />
-          <Route
-            path="shop"
-            element={<ShopPage />}
-          />
-          <Route
-            path="faq"
-            element={<FaqPage />}
-          />
-          <Route
-            path="about"
-            element={<AboutPage />}
-          />
-          <Route
-            path="*"
-            element={<NotFoundPage />}
-          />
+          {routes.map((route) => (
+            <Route
+              path={route.path}
+              element={<route.element />}
+            />
+          ))}
         </Route>
       </Routes>
     </BrowserRouter>

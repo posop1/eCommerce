@@ -1,1 +1,5 @@
 export * from './HomePage/HomePage'
+export * from './AboutPage/AboutPage'
+export * from './FaqPage/FaqPage'
+export * from './NotFoundPage/NotFoundPage'
+export * from './ShopPage/ShopPage'

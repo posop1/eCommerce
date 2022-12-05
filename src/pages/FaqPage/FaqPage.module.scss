@@ -1,0 +1,19 @@
+.FaqPage {
+  display: flex;
+  min-height: 90vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 35px;
+
+  h3 {
+    font-size: 45px;
+    margin-bottom: 40px;
+  }
+  ul {
+    font-size: 20px;
+    line-height: 40px;
+  }
+}

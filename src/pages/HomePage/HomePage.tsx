@@ -26,7 +26,7 @@ export const HomePage: React.FC<HomePageProps> = () => {
                   Shop
                 </Link>
                 <Link
-                  to="/shop"
+                  to="/about"
                   className={s.main__link}
                 >
                   About

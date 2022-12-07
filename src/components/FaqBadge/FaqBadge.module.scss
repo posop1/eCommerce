@@ -1,0 +1,25 @@
+.FaqBadge {
+  background: #080808;
+  color: white;
+  padding: 30px 0;
+
+  .inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h3 {
+    font-size: 40px;
+  }
+  ul {
+    font-size: 20px;
+    line-height: 40px;
+
+    span {
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+  }
+}

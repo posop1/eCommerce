@@ -15,3 +15,7 @@ export const links: ILinks[] = [
   { to: '/faq', name: 'FAQ' },
   { to: '/about', name: 'About' }
 ]
+
+export const aboutText: string = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo delectus perspiciatis
+            illum, debitis neque dolorum eligendi voluptate, repellat accusamus odio voluptas culpa
+            eos aliquid quisquam dolore laboriosam optio. Aliquam, ratione!`

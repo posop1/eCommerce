@@ -1,6 +1,8 @@
 import s from './ProductItem.module.scss'
 
-export const ProductItem = () => {
+interface ProductItemProps {}
+
+export const ProductItem: React.FC<ProductItemProps> = () => {
   return (
     <div className={s.ProductItem}>
       <img

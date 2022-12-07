@@ -1,6 +1,6 @@
 import { BsCart2 } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
-import { links } from '../../utils/constans'
+import { links } from '../../../utils/constans'
 import s from './Navbar.module.scss'
 
 interface NavbarProps {}

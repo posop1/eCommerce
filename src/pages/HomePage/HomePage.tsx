@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import homeImage from '../../../public/Header Banner.png'
+import homeImage from '../../assets/Header Banner.png'
 import s from './HomePage.module.scss'
 
 interface HomePageProps {}

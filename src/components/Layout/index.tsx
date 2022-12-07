@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom'
-import '../styles/app.scss'
+import '../../styles/app.scss'
 import Footer from './Footer/Footer'
 import Navbar from './Navbar/Navbar'
 
@@ -19,4 +19,4 @@ const Layout: React.FC<LayoutProps> = () => {
   )
 }
 
-export default Layout
+export { Layout }

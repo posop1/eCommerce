@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux'
 import { Routes } from 'react-router'
 import { BrowserRouter, Route } from 'react-router-dom'
-import Layout from './components/Layout'
+import { Layout } from './components/Layout/'
 import { store } from './redux/store'
 import { routes } from './utils/constans'
 

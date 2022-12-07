@@ -10,7 +10,7 @@ export const ProductItem = () => {
       />
       <div className={s.info}>
         <span className={s.name}>Name</span>
-        <span className={s.price}>322</span>
+        <span className={s.price}>322$</span>
       </div>
       <span className={s.category}>category</span>
       <button className={s.btn}>Buy</button>

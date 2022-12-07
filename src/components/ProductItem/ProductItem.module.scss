@@ -1,0 +1,48 @@
+.ProductItem {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 15px;
+  color: #080808;
+  box-shadow: 6px 13px 8px 0px rgba(34, 60, 80, 0.2);
+
+  .image {
+    max-width: 300px;
+  }
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  span {
+    font-size: 22px;
+  }
+  .price {
+    font-weight: 500;
+  }
+}
+.category {
+  font-size: 14px;
+  opacity: 0.7;
+}
+.btn {
+  margin-top: 15px;
+  display: flex;
+  align-self: flex-end;
+  padding: 5px 35px;
+  background: #080808;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+
+  cursor: pointer;
+
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    color: #080808;
+    background: white;
+  }
+}

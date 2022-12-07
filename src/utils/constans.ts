@@ -1,5 +1,5 @@
 import { AboutPage, FaqPage, HomePage, NotFoundPage, ShopPage } from '../pages'
-import { ILinks, IRoutes } from '../types'
+import { IFaqText, ILinks, IRoutes } from '../types'
 
 export const routes: IRoutes[] = [
   { path: '', element: HomePage },
@@ -19,3 +19,30 @@ export const links: ILinks[] = [
 export const aboutText: string = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo delectus perspiciatis
             illum, debitis neque dolorum eligendi voluptate, repellat accusamus odio voluptas culpa
             eos aliquid quisquam dolore laboriosam optio. Aliquam, ratione!`
+
+export const faqText: IFaqText[] = [
+  {
+    name: 'asdasd',
+    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo delectus perspiciatis
+            illum, debitis neque dolorum eligendi voluptate, repellat accusamus odio voluptas culpa
+            eos aliquid quisquam dolore laboriosam optio. Aliquam, ratione!`
+  },
+  {
+    name: 'asdasd',
+    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo delectus perspiciatis
+            illum, debitis neque dolorum eligendi voluptate, repellat accusamus odio voluptas culpa
+            eos aliquid quisquam dolore laboriosam optio. Aliquam, ratione!`
+  },
+  {
+    name: 'asdasd',
+    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo delectus perspiciatis
+            illum, debitis neque dolorum eligendi voluptate, repellat accusamus odio voluptas culpa
+            eos aliquid quisquam dolore laboriosam optio. Aliquam, ratione!`
+  },
+  {
+    name: 'asdasd',
+    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo delectus perspiciatis
+            illum, debitis neque dolorum eligendi voluptate, repellat accusamus odio voluptas culpa
+            eos aliquid quisquam dolore laboriosam optio. Aliquam, ratione!`
+  }
+]

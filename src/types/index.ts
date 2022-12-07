@@ -7,6 +7,10 @@ export interface IRoutes {
   element: React.FC
 }
 
+export interface IFaqText {
+  name: string
+  text: string
+}
 export interface IProduct {
   id: number
   name: string

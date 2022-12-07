@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import homeImage from '../../assets/Header Banner.png'
+import { ProductsBadge } from '../../components/ProductsBadge/ProductsBadge'
 import s from './HomePage.module.scss'
 
 interface HomePageProps {}
@@ -41,6 +42,7 @@ export const HomePage: React.FC<HomePageProps> = () => {
           </div>
         </div>
       </div>
+      <ProductsBadge limit={3} />
     </div>
   )
 }

@@ -1,3 +1,4 @@
+import { BsArrowRight } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
 import { ProductItem } from '../ProductItem/ProductItem'
 import s from './ProductsBadge.module.scss'
@@ -22,6 +23,12 @@ export const ProductsBadge: React.FC<ProductsBadgeProps> = ({ limit }) => {
             <ProductItem />
             <ProductItem />
           </div>
+          <Link
+            to="/shop"
+            className={s.link}
+          >
+            <BsArrowRight size={50} />
+          </Link>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { AboutPage, FaqPage, HomePage, NotFoundPage, ShopPage } from '../pages'
+import { AboutPage, CartPage, FaqPage, HomePage, NotFoundPage, ShopPage } from '../pages'
 import { IFaqText, ILinks, IRoutes } from '../types'
 
 export const routes: IRoutes[] = [
@@ -6,6 +6,7 @@ export const routes: IRoutes[] = [
   { path: 'shop', element: ShopPage },
   { path: 'faq', element: FaqPage },
   { path: 'about', element: AboutPage },
+  { path: 'cart', element: CartPage },
   { path: '*', element: NotFoundPage }
 ]
 
@@ -13,7 +14,8 @@ export const links: ILinks[] = [
   { to: '/', name: 'Home' },
   { to: '/shop', name: 'Shop' },
   { to: '/faq', name: 'FAQ' },
-  { to: '/about', name: 'About' }
+  { to: '/about', name: 'About' },
+  { to: '/cart', name: 'Cart' }
 ]
 
 export const aboutText: string = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo delectus perspiciatis

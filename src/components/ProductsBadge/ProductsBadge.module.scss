@@ -7,11 +7,17 @@
 .inner {
   display: flex;
   flex-direction: column;
-  h3 {
+  .link {
     display: flex;
     align-self: center;
     font-size: 30px;
     margin-bottom: 20px;
+
+    transition: 0.1s ease-in-out;
+
+    &:hover {
+      opacity: 0.6;
+    }
   }
 }
 .list {

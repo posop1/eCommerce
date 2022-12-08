@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { ProductItem } from '../ProductItem/ProductItem'
 import s from './ProductsBadge.module.scss'
 
@@ -10,7 +11,12 @@ export const ProductsBadge: React.FC<ProductsBadgeProps> = ({ limit }) => {
     <div className={s.ProductsBadge}>
       <div className="container">
         <div className={s.inner}>
-          <h3>Shop Examples</h3>
+          <Link
+            to="/shop"
+            className={s.link}
+          >
+            <h3>Products</h3>
+          </Link>
           <div className={s.list}>
             <ProductItem />
             <ProductItem />

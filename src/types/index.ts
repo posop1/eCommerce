@@ -14,7 +14,7 @@ export interface IFaqText {
 export interface IProduct {
   id: number
   name: string
-  description: string
+  description?: string
   price: number
   image: string
   category: string

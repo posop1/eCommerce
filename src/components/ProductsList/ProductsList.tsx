@@ -13,12 +13,7 @@ export const ProductsList: React.FC<ProductListProps> = ({ products }) => {
         products.map((product) => (
           <ProductItem
             key={product.id}
-            id={product.id}
-            name={product.name}
-            description={product.description}
-            price={product.price}
-            image={product.image}
-            category={product.category}
+            product={product}
           />
         ))}
     </div>

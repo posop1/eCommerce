@@ -20,6 +20,7 @@ const Navbar: React.FC<NavbarProps> = () => {
       <nav className={s.links}>
         {links.map((link) => (
           <Link
+            key={link.name}
             to={link.to}
             className={s.link}
           >

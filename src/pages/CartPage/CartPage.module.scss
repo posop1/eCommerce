@@ -1,0 +1,70 @@
+.CartPage {
+  margin-top: 50px;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+.cart__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.image {
+  max-width: 200px;
+}
+.cart__item {
+  margin-bottom: 35px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  box-shadow: 6px 13px 8px 0px rgba(34, 60, 80, 0.2);
+  padding: 25px;
+  border-radius: 15px;
+}
+.info__price {
+  display: flex;
+  align-self: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+.cart__item__info {
+  display: flex;
+
+  div {
+    margin-left: 30px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  span {
+    font-size: 15px;
+    opacity: 0.8;
+  }
+  p {
+    max-width: 600px;
+  }
+}
+.btn {
+  margin-top: 15px;
+  display: flex;
+  align-self: flex-end;
+  padding: 5px 35px;
+  background: #080808;
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+
+  cursor: pointer;
+
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    color: #080808;
+    background: white;
+  }
+}

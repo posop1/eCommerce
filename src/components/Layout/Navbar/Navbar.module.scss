@@ -36,6 +36,19 @@
   }
 }
 .cart__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+
+  .cart__length {
+    background: #080808;
+    color: white;
+    font-size: 15px;
+    padding: 0 8px;
+    border-radius: 50%;
+  }
+
   transition: 0.3s ease-in-out;
 
   &:hover {

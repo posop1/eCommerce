@@ -9,7 +9,7 @@ export const FaqBadge: React.FC = () => {
           <h3>FAQ</h3>
           <ul>
             {faqText.map((item) => (
-              <li key={item.name}>
+              <li key={item.id}>
                 <span>{item.name}</span> - {item.text}
               </li>
             ))}

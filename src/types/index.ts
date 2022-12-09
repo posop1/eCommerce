@@ -8,6 +8,7 @@ export interface IRoutes {
 }
 
 export interface IFaqText {
+  id: number
   name: string
   text: string
 }

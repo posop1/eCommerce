@@ -29,9 +29,7 @@
   opacity: 0.7;
 }
 .btn {
-  margin-top: 15px;
   display: flex;
-  align-self: flex-end;
   padding: 5px 35px;
   background: #080808;
   border: none;
@@ -47,5 +45,17 @@
   &:hover {
     color: #080808;
     background: white;
+  }
+}
+.rat__btn {
+  margin-top: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    display: flex;
+    align-items: center;
   }
 }

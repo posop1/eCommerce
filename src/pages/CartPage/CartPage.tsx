@@ -1,3 +1,4 @@
+import { AiFillStar } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import useActions from '../../hooks/useActions'
 import { useAppSelector } from '../../hooks/useAppSelector'
@@ -31,6 +32,10 @@ export const CartPage: React.FC = () => {
                       <h3>{item.name}</h3>
                       <span>{item.category}</span>
                       <p>{item.description}</p>
+                      <p className={s.rating}>
+                        <AiFillStar size={20} />
+                        {item.rating}
+                      </p>
                       <button
                         className={s.btn}
                         onClick={() => removeItem({ id: item.id })}

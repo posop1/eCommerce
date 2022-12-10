@@ -1,3 +1,4 @@
+import { AiFillStar } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import useActions from '../../hooks/useActions'
 import { useAppSelector } from '../../hooks/useAppSelector'
@@ -30,12 +31,18 @@ export const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
         <span className={s.price}>{product.price}$</span>
       </div>
       <span className={s.category}>{product.category}</span>
-      <button
-        className={s.btn}
-        onClick={() => (isExistsInCart ? removeItem({ id: product.id }) : addItem(product))}
-      >
-        {isExistsInCart ? 'Remove in Cart' : 'Add to Cart'}
-      </button>
+      <div className={s.rat__btn}>
+        <span>
+          <AiFillStar size={20} />
+          {product.rating}
+        </span>
+        <button
+          className={s.btn}
+          onClick={() => (isExistsInCart ? removeItem({ id: product.id }) : addItem(product))}
+        >
+          {isExistsInCart ? 'Remove in Cart' : 'Add to Cart'}
+        </button>
+      </div>
     </div>
   )
 }

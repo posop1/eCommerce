@@ -19,4 +19,5 @@ export interface IProduct {
   price: number
   image: string
   category: string
+  rating: number
 }

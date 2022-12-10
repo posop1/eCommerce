@@ -13,12 +13,22 @@ export const ShopPage: React.FC<ShopPageProps> = () => {
 
   const incrementPage = () => {
     setPage((prev) => prev + 1)
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
   }
   const decrementPage = () => {
     if (page === 1) {
       return
     }
     setPage((prev) => prev - 1)
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
   }
 
   return (

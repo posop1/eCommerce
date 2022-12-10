@@ -10,7 +10,7 @@ interface ProductsBadgeProps {
 }
 
 export const ProductsBadge: React.FC<ProductsBadgeProps> = ({ limit }) => {
-  const { data, isLoading, error } = useFetchProductsQuery(limit)
+  const { data, isLoading, error } = useFetchProductsQuery({ limit })
 
   return (
     <div className={s.ProductsBadge}>

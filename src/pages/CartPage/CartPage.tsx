@@ -1,12 +1,13 @@
 import { AiFillStar } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
+import { ProductItemInCart } from '../../components/ProductItemInCart/ProductItemInCart'
+import { Button } from '../../components/UI/Button/Button'
 import useActions from '../../hooks/useActions'
 import { useAppSelector } from '../../hooks/useAppSelector'
 import { calcTotalPrice } from '../../utils/calcTotalProce'
 import s from './CartPage.module.scss'
 
 export const CartPage: React.FC = () => {
-  const { removeItem } = useActions()
   const { cart } = useAppSelector((state) => state)
 
   const totalPrice = calcTotalPrice(cart)
@@ -18,34 +19,16 @@ export const CartPage: React.FC = () => {
           <div className={s.cart__list}>
             {cart.length > 0 ? (
               cart.map((item) => (
-                <div
+                <ProductItemInCart
                   key={item.id}
-                  className={s.cart__item}
-                >
-                  <div className={s.cart__item__info}>
-                    <img
-                      src={item.image}
-                      alt="cart image"
-                      className={s.image}
-                    />
-                    <div>
-                      <h3>{item.name}</h3>
-                      <span>{item.category}</span>
-                      <p>{item.description}</p>
-                      <p className={s.rating}>
-                        <AiFillStar size={20} />
-                        {item.rating}
-                      </p>
-                      <button
-                        className={s.btn}
-                        onClick={() => removeItem({ id: item.id })}
-                      >
-                        Remove
-                      </button>
-                    </div>
-                  </div>
-                  <span className={s.info__price}>{item.price}$</span>
-                </div>
+                  id={item.id}
+                  name={item.name}
+                  image={item.image}
+                  category={item.category}
+                  description={item.description}
+                  rating={item.rating}
+                  price={item.price}
+                />
               ))
             ) : (
               <div className={s.empty}>

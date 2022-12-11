@@ -7,11 +7,19 @@
 }
 .goToCart__link {
   background: #080808;
-  border: 2px solid white;
   padding: 10px 10px;
   color: white;
   border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    background: white;
+    color: #080808;
+  }
 }

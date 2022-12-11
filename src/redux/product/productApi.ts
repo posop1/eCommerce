@@ -14,11 +14,11 @@ export const productApi = createApi({
         }
       }
     }),
-    fetchProductById: build.query<IProduct, { id: number }>({
+    fetchProductById: build.query<IProduct, { id?: string }>({
       query: (arg) => {
         const { id } = arg
         return {
-          url: `/product/${id}`
+          url: `/products/${id}`
         }
       }
     })

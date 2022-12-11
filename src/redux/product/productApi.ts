@@ -13,8 +13,16 @@ export const productApi = createApi({
           params: { page, limit }
         }
       }
+    }),
+    fetchProductById: build.query<IProduct, { id: number }>({
+      query: (arg) => {
+        const { id } = arg
+        return {
+          url: `/product/${id}`
+        }
+      }
     })
   })
 })
 
-export const { useFetchProductsQuery } = productApi
+export const { useFetchProductsQuery, useFetchProductByIdQuery } = productApi

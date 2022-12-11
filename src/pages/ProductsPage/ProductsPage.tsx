@@ -3,11 +3,9 @@ import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 import { InfinitySpin } from 'react-loader-spinner'
 import { ProductsList } from '../../components/ProductsList/ProductsList'
 import { useFetchProductsQuery } from '../../redux/product/productApi'
-import s from './ShopPage.module.scss'
+import s from './ProductsPage.module.scss'
 
-interface ShopPageProps {}
-
-export const ShopPage: React.FC<ShopPageProps> = () => {
+export const ProductsPage: React.FC = () => {
   const [page, setPage] = useState(1)
   const { data = [], isLoading, error } = useFetchProductsQuery({ page })
 

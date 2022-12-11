@@ -1,9 +1,11 @@
-import { AboutPage, CartPage, FaqPage, HomePage, NotFoundPage, ShopPage } from '../pages'
+import { AboutPage, CartPage, FaqPage, HomePage, NotFoundPage, ProductsPage } from '../pages'
+import { FullProductPage } from '../pages/FullProductPage/FullProductPage'
 import { IFaqText, ILinks, IRoutes } from '../types'
 
 export const routes: IRoutes[] = [
   { path: '', element: HomePage },
-  { path: 'shop', element: ShopPage },
+  { path: 'products', element: ProductsPage },
+  { path: 'products/:id', element: FullProductPage },
   { path: 'faq', element: FaqPage },
   { path: 'about', element: AboutPage },
   { path: 'cart', element: CartPage },
@@ -12,7 +14,7 @@ export const routes: IRoutes[] = [
 
 export const links: ILinks[] = [
   { to: '/', name: 'Home' },
-  { to: '/shop', name: 'Shop' },
+  { to: '/products', name: 'Products' },
   { to: '/faq', name: 'FAQ' },
   { to: '/about', name: 'About' }
 ]

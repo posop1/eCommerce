@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import useActions from '../../hooks/useActions'
 import { useAppSelector } from '../../hooks/useAppSelector'
 import { IProduct } from '../../types'
+import { Button } from '../UI/'
 import s from './ProductItem.module.scss'
 
 interface ProductItemProps {
@@ -36,12 +37,11 @@ export const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
           <AiFillStar size={20} />
           {product.rating}
         </span>
-        <button
-          className={s.btn}
+        <Button
           onClick={() => (isExistsInCart ? removeItem({ id: product.id }) : addItem(product))}
         >
           {isExistsInCart ? 'Remove in Cart' : 'Add to Cart'}
-        </button>
+        </Button>
       </div>
     </div>
   )

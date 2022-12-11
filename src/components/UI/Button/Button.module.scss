@@ -1,0 +1,19 @@
+.btn {
+  display: flex;
+  padding: 5px 35px;
+  background: #080808;
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+
+  cursor: pointer;
+
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    color: #080808;
+    background: white;
+  }
+}

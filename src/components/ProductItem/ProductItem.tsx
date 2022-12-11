@@ -19,7 +19,7 @@ export const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
 
   return (
     <div className={s.ProductItem}>
-      <Link to="/shop">
+      <Link to={`/products/${product.id}`}>
         <img
           src={product.image}
           alt=""

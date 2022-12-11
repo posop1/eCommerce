@@ -1,4 +1,5 @@
 import { AiFillStar } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 import useActions from '../../hooks/useActions'
 import { IProduct } from '../../types'
 import { Button } from '../UI/'
@@ -18,11 +19,13 @@ export const ProductItemInCart: React.FC<IProduct> = ({
   return (
     <div className={s.cart__item}>
       <div className={s.cart__item__info}>
-        <img
-          src={image}
-          alt="cart image"
-          className={s.image}
-        />
+        <Link to={`/products/${id}`}>
+          <img
+            src={image}
+            alt="cart image"
+            className={s.image}
+          />
+        </Link>
         <div>
           <h3>{name}</h3>
           <span>{category}</span>

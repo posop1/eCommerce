@@ -12,6 +12,9 @@ export const ShopPage: React.FC<ShopPageProps> = () => {
   const { data = [], isLoading, error } = useFetchProductsQuery({ page })
 
   const incrementPage = () => {
+    if (data.length === 0) {
+      return
+    }
     setPage((prev) => prev + 1)
     window.scrollTo({
       top: 0,
@@ -30,6 +33,9 @@ export const ShopPage: React.FC<ShopPageProps> = () => {
       behavior: 'smooth'
     })
   }
+  const resetPages = () => {
+    setPage(1)
+  }
 
   return (
     <div className={s.ShopPage}>
@@ -47,6 +53,11 @@ export const ShopPage: React.FC<ShopPageProps> = () => {
             </div>
           ) : error ? (
             <div className={s.error}>ERROR</div>
+          ) : data.length === 0 ? (
+            <div className={s.empty}>
+              <h3>Empty</h3>
+              <button onClick={resetPages}>Go to first page</button>
+            </div>
           ) : (
             <ProductsList products={data} />
           )}

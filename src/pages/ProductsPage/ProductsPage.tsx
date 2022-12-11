@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 import { InfinitySpin } from 'react-loader-spinner'
 import { ProductsList } from '../../components/ProductsList/ProductsList'
+import { Button } from '../../components/UI'
 import { useFetchProductsQuery } from '../../redux/product/productApi'
 import s from './ProductsPage.module.scss'
 
@@ -54,7 +55,7 @@ export const ProductsPage: React.FC = () => {
           ) : data.length === 0 ? (
             <div className={s.empty}>
               <h3>Empty</h3>
-              <button onClick={resetPages}>Go to first page</button>
+              <Button onClick={resetPages}>Go to first page</Button>
             </div>
           ) : (
             <ProductsList products={data} />

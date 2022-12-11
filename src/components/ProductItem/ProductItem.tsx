@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { AiFillStar, AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import useActions from '../../hooks/useActions'
@@ -18,7 +19,14 @@ export const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
   const isExistsInCart = cart.some((i) => i.id === product.id)
 
   return (
-    <div className={s.ProductItem}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{
+        duration: 0.5
+      }}
+      className={s.ProductItem}
+    >
       <Link to={`/products/${product.id}`}>
         <img
           src={product.image}
@@ -53,6 +61,6 @@ export const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
           )}
         </Button>
       </div>
-    </div>
+    </motion.div>
   )
 }

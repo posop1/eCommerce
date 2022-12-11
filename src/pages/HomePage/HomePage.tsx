@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import homeImage from '../../assets/Header Banner.png'
 import { AboutBadge } from '../../components/AboutBadge/AboutBadge'
@@ -12,7 +13,14 @@ export const HomePage: React.FC<HomePageProps> = () => {
     <div className={s.HomePage}>
       <div className={s.inner}>
         <div className="container">
-          <div className={s.main}>
+          <motion.div
+            className={s.main}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              duration: 1
+            }}
+          >
             <div className={s.main__info}>
               <h2>
                 Welcome To Out <br /> <span>Hello eCommerce</span>{' '}
@@ -23,7 +31,7 @@ export const HomePage: React.FC<HomePageProps> = () => {
               </p>
               <div className={s.main__links}>
                 <Link
-                  to="/shop"
+                  to="/products"
                   className={s.main__link}
                 >
                   Shop
@@ -41,7 +49,7 @@ export const HomePage: React.FC<HomePageProps> = () => {
               alt="homeImage"
               className={s.main__info}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
       <ProductsBadge limit={3} />

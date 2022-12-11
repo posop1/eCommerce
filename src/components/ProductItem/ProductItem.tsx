@@ -1,4 +1,4 @@
-import { AiFillStar } from 'react-icons/ai'
+import { AiFillStar, AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import useActions from '../../hooks/useActions'
 import { useAppSelector } from '../../hooks/useAppSelector'
@@ -40,7 +40,17 @@ export const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
         <Button
           onClick={() => (isExistsInCart ? removeItem({ id: product.id }) : addItem(product))}
         >
-          {isExistsInCart ? 'Remove in Cart' : 'Add to Cart'}
+          {isExistsInCart ? (
+            <span>
+              <AiOutlineMinus size={18} />
+              Remove
+            </span>
+          ) : (
+            <span>
+              <AiOutlinePlus size={18} />
+              Add
+            </span>
+          )}
         </Button>
       </div>
     </div>
